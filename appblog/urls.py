@@ -7,7 +7,7 @@ urlpatterns = [
     path("user/", user, name="usuario"),
     path("libros/", book, name="libro"),
     path("comentarios/", comment, name="comentario"),
-    path("libroFormulario", libroFormulario, name="libroFormulario"),
+    path("libroFormulario/", libroFormulario, name="libroFormulario"),
 
  ]
     

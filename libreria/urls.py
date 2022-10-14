@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appblog/', include('appblog.urls')),
+    path('', include('appblog.urls')),
 ]
