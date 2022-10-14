@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(251, 255, 0);
+    }
+
+</style>
+{% load static %}
+
+{% block contenidoquecambia %}
+<body>
+
+
+    <p> Estamos buscando el: {{autor}} </p>
+    {% if libros %}
+
+    <ul>
+        {% for libro in libros%}
+        <li> {{libro.titulo}} </li>
+        {% comment %} <li> {{libro.autor}} </li> {% endcomment %}
+        {% endfor%}
+    </ul>
+
+    {%endif%}
+</body>
+{% endblock%}
+</html>

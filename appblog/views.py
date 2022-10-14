@@ -36,3 +36,21 @@ def libroFormulario(request):
      miFormulario = LibroFormulario()
         
     return render(request, "appblog/libroFormulario.html", {"miFormulario":miFormulario})
+
+def busquedaAutor(request):
+    return render(request, "appblog/busquedaAutor.html")
+    
+    
+def buscar(request):
+    if request.GET["autor"]:
+    
+        autor = request.GET["autor"]
+        libros = Libro.objects.filter(autor__icontains=autor)
+        
+        return render(request, "appblog/resultadosBusquedas.html", {"libros":libros, "autor":autor})
+    else:
+        
+        respuesta = "No enviaste datos"
+    
+    return HttpResponse(respuesta)
+    

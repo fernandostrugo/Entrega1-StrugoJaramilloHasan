@@ -8,6 +8,8 @@ urlpatterns = [
     path("libros/", book, name="libro"),
     path("comentarios/", comment, name="comentario"),
     path("libroFormulario/", libroFormulario, name="libroFormulario"),
+    path("busquedaAutor/", busquedaAutor, name="busquedaAutor"),
+    path("buscar/", buscar,),
 
  ]
     
