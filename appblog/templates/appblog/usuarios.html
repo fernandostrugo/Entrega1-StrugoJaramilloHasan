@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 0, 13);
+    }
+
+</style>
+<body>
+    <h1>Aquí crearemos los usuarios</h1>
+    <p>Usuarios creados por admin ... por los momentos :P</p>
+    {% for user in users %}
+        <p>nombre completo: {{user.nombre}}  {{user.apellido}} </p> 
+        <p>DNI:{{user.dni}} </p>
+        <p>Alias:{{user.nickname}} </p>   
+        <p>email:{{user.email}} </p>
+        <p>Usuario desde:{{user.fecharegistro}} </p>
+        <br>
+    {% endfor %}
+</body>
+
+</html>
