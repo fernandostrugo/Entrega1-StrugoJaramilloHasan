@@ -13,7 +13,7 @@ class Libro(models.Model):
     titulo=models.CharField(max_length=80)
     autor=models.CharField(max_length=30)
     genero=models.CharField(max_length=30)
-    fechaingreso=models.DateTimeField()
+    fechaingreso=models.CharField(max_length=30)
 
 class Comentario(models.Model):
     id=models.IntegerField(primary_key=True)
