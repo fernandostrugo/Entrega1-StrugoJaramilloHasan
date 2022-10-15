@@ -18,13 +18,12 @@
 <body>
 
 
-    <p> Estamos buscando el: {{autor}} </p>
+    <p> Busqueda por Titulo, Autor: {{autor}} </p>
     {% if libros %}
 
     <ul>
         {% for libro in libros%}
         <li> {{libro.titulo}} </li>
-        {% comment %} <li> {{libro.autor}} </li> {% endcomment %}
         {% endfor%}
     </ul>
 
